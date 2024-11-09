@@ -3,9 +3,12 @@
   <a href="https://adityakonda04.vercel.app/" target="_blank">Aditya Konda</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
+  <img alt="Demo" src="./Images/Portfolio.jpg" />
 </div>
-
+<br/>
+<div align="center">
+  <img alt="Demo" src="./Images/Aditya.jpg" />
+</div>
 <br/>
 
 <center>
