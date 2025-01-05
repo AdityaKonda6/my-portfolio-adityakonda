@@ -24,10 +24,26 @@ function ResumeNew() {
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px", margin: "10px" }}
           >
             <AiOutlineDownload />
             &nbsp;Download CV
+          </Button>
+          <Button
+            variant="primary"
+            href="https://www.linkedin.com/in/aditya-adi-konda/"
+            target="_blank"
+            style={{ maxWidth: "250px", margin: "10px" }}
+          >
+            View My LinkedIn Profile
+          </Button>
+          <Button
+            variant="primary"
+            href="https://github.com/AdityaKonda6"
+            target="_blank"
+            style={{ maxWidth: "250px", margin: "10px" }}
+          >
+            View My GitHub Profile
           </Button>
         </Row>
 
