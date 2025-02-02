@@ -23,7 +23,7 @@ function Home2() {
             As a kid I loved tinkering with things that were broken, figuring out how they worked, and fixing them again. When I finished high school. 
             I knew exactly what I wanted my career to be.
             I'm Currently pursuing the under-graduate degree of Information Technology from K.C College of Engineering and Management Studies. 
-            I'm intrested in Web Devlopment field and seeking exciting opportunities related to the same. 
+            I'm intrested in Software Development field and seeking exciting opportunities related to the same. 
             Being a student I have repeatedly been exposed to new culture and diverse groups of people. 
             This is made me able to quickly adapt to changes and gain a broader perspective. 
             I am always curious about things and enjoy learning. I like to solve problems and fix errors. 
@@ -31,7 +31,7 @@ function Home2() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> React, Javascript and Python. </b>
+                <b className="purple"> Java, SQL, Python, MERN </b>
               </i>
               <br />
               <br />
