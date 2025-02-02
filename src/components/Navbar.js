@@ -94,7 +94,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href=""
+                href="https://adityakonda04.wixsite.com/adityasblog/blog"
                 target="_blank"
                 rel="noreferrer"
               >
