@@ -31,6 +31,17 @@ function Projects() {
             />
           </Col>
 
+         <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Charity}
+              isBlog={false}
+              title="💰 Charity BlockChain Project"
+              description="The Charity Blockchain Project is a decentralized platform that ensures transparency and security in charitable donations using blockchain technology. The platform leverages smart contracts to facilitate secure transactions and prevent fraud, ensuring that funds reach the intended recipients."
+              ghLink="https://github.com/AdityaKonda6/Charity-Blockchain-Project-Aditya_Konda"
+              demoLink="https://adityablockchainproject.vercel.app/"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={inventory}
