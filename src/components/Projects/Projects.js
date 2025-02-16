@@ -4,9 +4,9 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import fly from "../../Assets/Projects/airtic.png";
 import inventory from "../../Assets/Projects/inventory.png";
-import men from "../../Assets/Projects/men.png";
-import lenskart from "../../Assets/Projects/home.jpg";
-import predico from "../../Assets/Projects/Home.png";
+import men from "../../Assets/Projects/menss.png";
+import lenskart from "../../Assets/Projects/lenskart.png";
+import predico from "../../Assets/Projects/disease.png";
 import Charity from "../../Assets/Projects/welcome.png";
 
 function Projects() {
