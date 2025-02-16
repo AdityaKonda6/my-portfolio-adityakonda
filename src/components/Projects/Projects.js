@@ -7,7 +7,7 @@ import inventory from "../../Assets/Projects/1st Main Screen.png";
 import men from "../../Assets/Projects/men.png";
 import lenskart from "../../Assets/Projects/home.jpg";
 import predico from "../../Assets/Projects/Home.png";
-import Charity from "../../Assets/Projects/Welcome.jpg";
+import Charity from "../../Assets/Projects/welcome.png";
 
 function Projects() {
   return (
