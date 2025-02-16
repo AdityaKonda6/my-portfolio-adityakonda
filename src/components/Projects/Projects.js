@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import fly from "../../Assets/Projects/airtic.png";
+import fly from "../../Assets/Projects/airtic.jpg";
 import inventory from "../../Assets/Projects/1st Main Screen.png";
 import men from "../../Assets/Projects/men.png";
 import lenskart from "../../Assets/Projects/home.jpg";
