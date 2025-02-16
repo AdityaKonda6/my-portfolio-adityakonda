@@ -28,7 +28,7 @@ function Projects() {
               title="✈️✈︎ Fly With Aditya"
               description="A streamlined web application for booking flights, developed with PHP and MySQL. Users can search flights, book tickets, and manage bookings, while admins oversee schedules and pricing. The platform features secure user authentication, a responsive interface, and seamless transaction management."
               ghLink="https://github.com/AdityaKonda6/Online-Flight-Booking--PHP"
-              demoLink="fly-with-aditya.vercel.app/"
+              demoLink="https://fly-with-aditya.vercel.app/"
             />
           </Col>
 
