@@ -83,7 +83,7 @@ function Projects() {
               title="🩺 Predico - Disease Prediction System"
               description="An ML-powered disease prediction platform built with Flask and Python, designed to assist in early diagnosis. Patients enter symptoms to receive predictive insights using the Naive Bayes algorithm, while doctors and admins manage records and monitor cases, enhancing healthcare accessibility and proactive intervention."
               ghLink="https://github.com/AdityaKonda6/Predico-Aditya"
-              demoLink="predico-aditya.vercel.app"
+              demoLink="https://predico-aditya.onrender.com/"
             />
           </Col>
 
