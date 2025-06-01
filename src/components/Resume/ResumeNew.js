@@ -6,31 +6,39 @@ import { AiOutlineDownload, AiOutlineLeft, AiOutlineRight } from "react-icons/ai
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
-// Import both resumes
+// ✅ Correctly import both resumes
 import resume1 from "../../Assets/Aditya__Konda__Resume.pdf";
 import resume2 from "../../Assets/Aditya__Konda__Resume_Table.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
+  const [width, setWidth] = useState(window.innerWidth);
   const [currentResumeIndex, setCurrentResumeIndex] = useState(0);
 
+  // ✅ Resume array
   const resumes = [
     { file: resume1, name: "Detailed Resume" },
     { file: resume2, name: "Tabular Resume" },
   ];
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // ✅ Correct handlers
   const handlePrev = () => {
-    setCurrentResumeIndex((prev) => (prev === 0 ? resumes.length - 1 : prev - 1));
+    setCurrentResumeIndex((prevIndex) =>
+      prevIndex === 0 ? resumes.length - 1 : prevIndex - 1
+    );
   };
 
   const handleNext = () => {
-    setCurrentResumeIndex((prev) => (prev === resumes.length - 1 ? 0 : prev + 1));
+    setCurrentResumeIndex((prevIndex) =>
+      prevIndex === resumes.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   return (
@@ -38,7 +46,8 @@ function ResumeNew() {
       <Container fluid className="resume-section">
         <Particle />
 
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        {/* Top Buttons */}
+        <Row style={{ justifyContent: "center" }}>
           <Button
             variant="primary"
             href={resumes[currentResumeIndex].file}
@@ -54,7 +63,7 @@ function ResumeNew() {
             target="_blank"
             style={{ maxWidth: "250px", margin: "10px" }}
           >
-            View My LinkedIn Profile
+            View My LinkedIn
           </Button>
           <Button
             variant="primary"
@@ -62,10 +71,11 @@ function ResumeNew() {
             target="_blank"
             style={{ maxWidth: "250px", margin: "10px" }}
           >
-            View My GitHub Profile
+            View GitHub
           </Button>
         </Row>
 
+        {/* Resume Display with Navigation */}
         <Row className="resume" style={{ justifyContent: "center", alignItems: "center" }}>
           <Col xs="auto">
             <Button onClick={handlePrev} variant="secondary" style={{ marginRight: "20px" }}>
@@ -74,7 +84,10 @@ function ResumeNew() {
           </Col>
 
           <Col xs="auto">
-            <Document file={resumes[currentResumeIndex].file}>
+            <Document
+              key={currentResumeIndex} // ✅ Force re-render on resume change
+              file={resumes[currentResumeIndex].file}
+            >
               <Page pageNumber={1} scale={width > 786 ? 1.5 : 0.6} />
             </Document>
           </Col>
@@ -86,6 +99,7 @@ function ResumeNew() {
           </Col>
         </Row>
 
+        {/* Bottom Download Button */}
         <Row style={{ justifyContent: "center", marginTop: "20px" }}>
           <Button
             variant="primary"
