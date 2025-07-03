@@ -8,6 +8,7 @@ import men from "../../Assets/Projects/menss.png";
 import lenskart from "../../Assets/Projects/lenskart.png";
 import predico from "../../Assets/Projects/disease.png";
 import Charity from "../../Assets/Projects/welcome.png";
+import AutomationTesting from "../../Assets/Projects/automationtesting.png";
 
 function Projects() {
   return (
@@ -21,6 +22,20 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={AutomationTesting}
+              isBlog={false}
+              title="⚙️🤖 Automation Testing for Login Page"
+              description="This project automates login testing for the Soundbox web application using Selenium WebDriver, TestNG, and WebDriverManager. It performs 15 valid and 15 invalid login attempts, takes screenshots after each attempt for verification, and saves them automatically. The project supports running on Linux and Windows systems."
+              ghLink="https://github.com/AdityaKonda6/Automation-Testing-LoginPage-Windows_Linux"
+              demoLink="https://adityakonda04.vercel.app"
+            />
+          </Col>
+
+
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={fly}
