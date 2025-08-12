@@ -70,16 +70,8 @@ function AboutCard() {
   and secure software solutions.
 </p>
 
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Aditya Konda </span>
-            from <span className="purple"> Bhiwandi, India.</span>
-            <br />
-            I am currently studying at K.C College Of Engineering & Management Studies.
-            <br />
-            I am persuing Bachelors Of Engineering in Information Technology.
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
+<p style={{ textAlign: "justify" }}>
+            <span className="purple">Some of my hobbies include:</span>
           </p>
           <ul>
             <li className="about-activity">
