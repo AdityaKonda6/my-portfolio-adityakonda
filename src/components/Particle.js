@@ -8,10 +8,10 @@ function Particle() {
       params={{
         particles: {
           number: {
-            value: 160,
+            value: 80, // Moderate amount for visibility and performance
             density: {
               enable: true,
-              value_area: 1500,
+              value_area: 800,
             },
           },
           line_linked: {
@@ -19,18 +19,22 @@ function Particle() {
             opacity: 0.3,
           },
           move: {
-            direction: "none", // Changed from "right" to "none"
-            speed: 0.5,
-            random: true, // Add random movement
+            direction: "none",
+            speed: 1.2, // Smooth, continuous movement
+            random: true,
+            straight: false,
+            out_mode: "out",
           },
           size: {
-            value: 1,
+            value: 2, // Slightly larger for visibility
           },
           opacity: {
+            value: 0.7, // More visible particles
             anim: {
               enable: true,
-              speed: 1000,
-              opacity_min: 0.05,
+              speed: 1,
+              opacity_min: 0.3,
+              sync: false,
             },
           },
         },
@@ -43,7 +47,7 @@ function Particle() {
           },
           modes: {
             push: {
-              particles_nb: 1,
+              particles_nb: 2,
             },
           },
         },
