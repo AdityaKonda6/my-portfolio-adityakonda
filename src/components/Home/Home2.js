@@ -19,15 +19,24 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-            Finding creative solutions to problems is something I have always enjoyed. 🤷‍♂️
-            As a kid I loved tinkering with things that were broken, figuring out how they worked, and fixing them again. When I finished high school. 
-            I knew exactly what I wanted my career to be.
-            I'm Currently pursuing the under-graduate degree of Information Technology from K.C College of Engineering and Management Studies. 
-            I'm intrested in Software Development field and seeking exciting opportunities related to the same. 
-            Being a student I have repeatedly been exposed to new culture and diverse groups of people. 
-            This is made me able to quickly adapt to changes and gain a broader perspective. 
-            I am always curious about things and enjoy learning. I like to solve problems and fix errors. 
-            I am a detail oriented person and I keep my goals and tasks organized to maintain productivity.
+           I’m a problem-solver at heart — from fixing broken gadgets as a kid to 
+  building scalable applications today. Currently, I’m pursuing my 
+  undergraduate degree in <b className="purple">Information Technology</b> at 
+  K.C. College of Engineering and Management Studies.
+  <br /><br />
+  I specialize in <b className="purple">Java, SQL, Python, and the MERN stack</b> 
+  with a growing expertise in <b className="purple">DevOps practices</b>, 
+  cloud deployment, and automation testing. My interests include 
+  <b className="purple"> web technologies, product development, and 
+  machine learning</b>.
+  <br /><br />
+  I enjoy building solutions with <b className="purple">Node.js</b> and 
+  modern JavaScript frameworks like <b className="purple">React.js</b> and 
+  <b className="purple"> Next.js</b>, always aiming to merge clean code 
+  with impactful user experiences.
+  <br /><br />
+  Adaptable, detail-oriented, and curious — I thrive in dynamic environments 
+  and enjoy collaborating with diverse teams to turn ideas into reality.
               <br />
               <br />I am fluent in classics like
               <i>
