@@ -19,37 +19,36 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-           I’m a problem-solver at heart — from fixing broken gadgets as a kid to 
-  building scalable applications today. Currently, I’m pursuing my 
-  undergraduate degree in <b className="purple">Information Technology</b> at 
-  K.C. College of Engineering and Management Studies.
+             I’m <b className="purple">Aditya Konda</b>, a Software Testing Engineer with hands-on
+  experience in <b className="purple">manual and automation testing</b>. I’ve built
+  dynamic Selenium-based automation frameworks — including a 
+  <b className="purple"> role-based user creation script</b> with Excel-driven inputs,
+  duplicate handling, and detailed screenshot logging.
   <br /><br />
-  I specialize in <b className="purple">Java, SQL, Python, and the MERN stack</b> 
-  with a growing expertise in <b className="purple">DevOps practices</b>, 
-  cloud deployment, and automation testing. My interests include 
-  <b className="purple"> web technologies, product development, and 
-  machine learning</b>.
+  As part of my academic journey, I developed <b className="purple">SHEild</b>, an
+  Android safety application designed to provide real-time alerts and emergency
+  contact features, focusing on usability and reliability under critical scenarios.
   <br /><br />
-  I enjoy building solutions with <b className="purple">Node.js</b> and 
-  modern JavaScript frameworks like <b className="purple">React.js</b> and 
-  <b className="purple"> Next.js</b>, always aiming to merge clean code 
-  with impactful user experiences.
+  Currently, I’m expanding my expertise into <b className="purple">DevOps</b> —
+  working with <b className="purple">Git, GitHub, CI/CD pipelines, Docker, Linux</b>,
+  and cloud deployment practices to bridge the gap between development and operations.
   <br /><br />
-  Adaptable, detail-oriented, and curious — I thrive in dynamic environments 
-  and enjoy collaborating with diverse teams to turn ideas into reality.
+  My tech stack includes 
+  <b className="purple"> Java, Python, SQL, Node.js, React.js, Git, Selenium, Maven</b>,
+  with a strong foundation in software quality assurance principles.
+  <br /><br />
+  I thrive on solving problems, optimizing processes, and delivering
+  <b className="purple"> production-ready, scalable, and testable solutions</b>. 
+  Adaptable and detail-oriented, I enjoy working with diverse teams and exploring
+  emerging technologies that can make systems more efficient and reliable.
               <br />
-              <br />I am fluent in classics like
+                        <br />
+              My field of Interest's are &nbsp;
               <i>
-                <b className="purple"> Java, SQL, Python, MERN </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
+                <b className="purple">DevOps and Automation Testing </b> and
                 also in areas related to{" "}
                 <b className="purple">
-                  Machine Learning and App Devlopment.
+                  Cloud Security Engineer, SRE, Platform Engineer and Software Testing
                 </b>
               </i>
               <br />
