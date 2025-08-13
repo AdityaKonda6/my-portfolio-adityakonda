@@ -2,13 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import fly from "../../Assets/Projects/airtic.png";
-import inventory from "../../Assets/Projects/inventory.png";
-import men from "../../Assets/Projects/menss.png";
-import lenskart from "../../Assets/Projects/lenskart.png";
-import predico from "../../Assets/Projects/disease.png";
-import Charity from "../../Assets/Projects/welcome.png";
-import AutomationTesting from "../../Assets/Projects/automationtesting.png";
+import fly from "../../Assets/Projects/airtic.gif";
+import inventory from "../../Assets/Projects/inventory.gif";
+import men from "../../Assets/Projects/menss.gif";
+import lenskart from "../../Assets/Projects/lenskart.gif";
+import predico from "../../Assets/Projects/disease.gif";
+import Charity from "../../Assets/Projects/blockchain.gif";
+import AutomationTesting from "../../Assets/Projects/automationtesting.gif";
 
 function Projects() {
   return (
