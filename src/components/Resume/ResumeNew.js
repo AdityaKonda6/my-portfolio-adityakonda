@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import androidResume from "../../Assets/Android_Aditya_Konda_Resume_IT.pdf";
-import softwareResume from "../../Assets/SoftwareDeveloper_Aditya_Konda_Resume_IT.pdf";
-import devopsResume from "../../Assets/HLDevOps_Aditya_Konda_Resume_IT.pdf";
+import androidResume from "../../Assets/Resume - Aditya Konda - Android Developer.pdf";
+import softwareResume from "../../Assets/Resume - Aditya Konda - Software Developer.pdf";
+import devopsResume from "../../Assets/Resume - Aditya Konda - DevOps Engineer.pdf";
 import Particle from "../Particle";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
