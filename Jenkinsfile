@@ -22,7 +22,11 @@ pipeline {
                 bat 'docker stop my-portfolio || exit 0'
                 bat 'docker rm my-portfolio || exit 0'
 
-                // Run the new container with your portfolio on port 8081
+                // *** ADD THIS LINE ***
+                // Pull the latest image from Docker Hub to ensure we have the new version
+                bat 'docker pull adityakonda/my-portfolio-app'
+
+                // Run the new container using the image we just pulled
                 bat 'docker run -d --name my-portfolio -p 8081:80 adityakonda/my-portfolio-app'
             }
         }
