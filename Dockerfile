@@ -1,20 +1,5 @@
-# Start from an official, lightweight Python base image
-FROM python:3.9-slim
+# Start from the official, lightweight Nginx web server image
+FROM nginx:alpine
 
-# Set the working directory inside the container to /app
-WORKDIR /app
-
-# Copy the dependencies file into the container
-COPY requirements.txt .
-
-# Install the Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the rest of the application code into the container
-COPY . .
-
-# Tell Docker that the container will listen on port 80
-EXPOSE 80
-
-# The command to run when the container starts
-CMD ["python", "app.py"]
+# Copy your website's files into the default Nginx web root directory
+COPY . /usr/share/nginx/html
