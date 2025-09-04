@@ -13,11 +13,12 @@ RUN npm install
 # Copy the rest of the application source code
 COPY . .
 
-# Run the build command to create the optimized static files
-RUN npm run build
+# *** THIS IS THE LINE TO CHANGE ***
+# Run the build command with an increased memory limit
+RUN NODE_OPTIONS=--max-old-space-size=4096 npm run build
 
 
-# STAGE 2: Serve the built application using a lightweight Nginx server
+# STAGE 2: Serve the application using a lightweight Nginx server
 FROM nginx:alpine
 
 # Copy the built files from the 'builder' stage into the Nginx web server's public directory
