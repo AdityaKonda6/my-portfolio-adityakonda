@@ -16,7 +16,7 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Projects </strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
@@ -27,8 +27,8 @@ function Projects() {
             <ProjectCard
               imgPath={AutomationTesting}
               isBlog={false}
-              title="⚙️🤖 Automation Testing for Login Page"
-              description="This project automates login testing for the Soundbox web application using Selenium WebDriver, TestNG, and WebDriverManager. It performs 15 valid and 15 invalid login attempts, takes screenshots after each attempt for verification, and saves them automatically. The project supports running on Linux and Windows systems."
+              title="⚙️🤖 Automation Testing"
+              description="This project automates many features for the Soundbox web application using Selenium WebDriver, TestNG, and WebDriverManager. It performs 15 valid and 15 invalid login attempts, takes screenshots after each attempt for verification, and saves them automatically. The project supports running on Linux and Windows systems."
               ghLink="https://github.com/AdityaKonda6/Automation-Testing-CWD-By-Aditya"
               demoLink="https://adityakonda04.vercel.app"
             />
