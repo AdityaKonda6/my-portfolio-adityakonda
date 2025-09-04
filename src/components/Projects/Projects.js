@@ -46,7 +46,7 @@ function Projects() {
               title="🏗️ CI/CD Pipeline for React App"
               description="A second automated pipeline designed for a modern frontend application. This pipeline uses a multi-stage Dockerfile to build a React app and serve it via Nginx, creating a small and secure production image. The entire process is managed by a Jenkinsfile and triggered automatically by webhooks, showcasing adaptability to different application architectures."
               ghLink="https://github.com/AdityaKonda6/my-portfolio-adityakonda"
-              demoLink="http://56.228.36.81:8081"
+              demoLink="https://adityakonda04.vercel.app/"
             />
           </Col>
 
