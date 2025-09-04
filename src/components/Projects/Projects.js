@@ -94,6 +94,40 @@ function Projects() {
             />
           </Col>
           
+         <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={men}
+              isBlog={false}
+              title="💇‍♂️ Men Saloon Management System"
+              description="A PHP-based system designed to streamline salon operations. It offers appointment booking, customer management, and service tracking for an organized client experience. With a responsive interface and admin controls, this application simplifies salon workflows, enhancing service efficiency and customer satisfaction."
+              ghLink="https://github.com/AdityaKonda6/Men-Saloon-Management-System---PHP"
+              demoLink="https://aditya-men-saloon.vercel.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={predico}
+              isBlog={false}
+              title="🩺 Predico - Disease Prediction System"
+              description="An ML-powered disease prediction platform built with Flask and Python, designed to assist in early diagnosis. Patients enter symptoms to receive predictive insights using the Naive Bayes algorithm, while doctors and admins manage records and monitor cases, enhancing healthcare accessibility and proactive intervention."
+              ghLink="https://github.com/AdityaKonda6/Predico-Aditya"
+              demoLink="https://predico-aditya.onrender.com/"
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+           <ProjectCard
+              imgPath={inventory}
+              isBlog={false}
+              title="📦💰 Inventory Management System"
+              description="A desktop application in Python with SQLite for efficient inventory tracking. Users can manage products, record transactions, and generate stock reports through an intuitive GUI built with Tkinter. This system simplifies inventory processes, enhancing real-time stock monitoring and record-keeping accuracy."
+              ghLink="https://github.com/AdityaKonda6/Inventory-Management-System-Mini-Project--Python"
+              demoLink=""
+            />
+          </Col>
+          
         </Row>
       </Container>
     </Container>
