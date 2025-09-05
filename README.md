@@ -1,17 +1,8 @@
-<h2 align="center">
-  My Portfolio <br/>
-  <a href="https://adityakonda04.vercel.app/" target="_blank">Aditya Konda</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/Portfolio.jpg" />
-</div>
-<br/>
-<div align="center">
-  <img alt="Demo" src="./Images/Aditya.jpg" />
-</div>
-<br/>
+# Personal Portfolio with Automated CI/CD Deployment
+
+
 <center>
-	
+
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
@@ -27,67 +18,59 @@
     <a href="https://github.com/AdityaKonda6/my-portfolio-adityakonda/issues">Request Feature</a>
 </h3>
 
-Of course. Your GitHub `README.md` is the front page for your project. Now that you've built an automated pipeline for your portfolio, the README should reflect that. It should not only explain the portfolio itself but also showcase the impressive DevOps work behind it.
-
-Here is a new, professional `README.md` file. Copy this content and use it to replace the entire text of the `README.md` file in your `my-portfolio-adityakonda` repository on GitHub.
-
------
+---
 
 ## 📖 About The Project
 
-This repository contains the source code for my personal portfolio website. It is a fully responsive single-page application built with **React.js**.
+This repository contains the source code for my personal portfolio website, a fully responsive single-page application built with **React.js**.
 
-Beyond being a showcase of my frontend projects, this repository is also a hands-on demonstration of my **DevOps and CI/CD skills**. The entire process—from a code commit to live deployment—is fully automated using a Jenkins pipeline that deploys the application as a Docker container to an AWS EC2 instance.
+Beyond showcasing my frontend projects, this repository is also a hands-on demonstration of my **DevOps and CI/CD skills**. The entire process—from a code commit to live deployment—is fully automated using a Jenkins pipeline that deploys the application as a Docker container to an AWS EC2 instance.
 
------
+---
 
 ## 🚀 The CI/CD Pipeline
 
 This project is configured with a complete Continuous Integration and Continuous Deployment (CI/CD) pipeline.
 
-**Workflow:** `Git Push` -\> `GitHub Webhook` -\> `Jenkins Pipeline` -\> `Docker Build & Push` -\> `Deploy to AWS EC2`
+**Workflow:** `Git Push` -> `GitHub Webhook` -> `Jenkins Pipeline` -> `Docker Build & Push` -> `Deploy to AWS EC2`
 
 1.  **Continuous Integration (CI):** On every `git push` to the `main` branch, a GitHub webhook automatically triggers the pipeline on the Jenkins server.
 2.  **Build:** The Jenkins pipeline uses a **multi-stage Dockerfile**.
-      * **Stage 1** uses a `node:18-alpine` image to run `npm install` and `npm run build`, creating an optimized production build of the React app.
-      * **Stage 2** uses a lightweight `nginx:alpine` image. The static files from the build stage are copied into the Nginx server directory. This creates a small, efficient, and secure final Docker image.
+    * **Stage 1** uses a `node:18-alpine` image to run `npm install` and `npm run build`, creating an optimized production build of the React app.
+    * **Stage 2** uses a lightweight `nginx:alpine` image. The static files from the build stage are copied into the Nginx server directory. This creates a small, efficient, and secure final Docker image.
 3.  **Registry:** The newly built Docker image is tagged and pushed to Docker Hub.
 4.  **Continuous Deployment (CD):** The pipeline then connects to the host server, pulls the latest image from Docker Hub, and deploys it as a new Docker container, making the changes live.
 
------
+---
 
 ## 🛠️ Built With
 
 ### Frontend:
-
-  * [React.js](https://reactjs.org/)
-  * [Node.js](https://nodejs.org/)
-  * [React-Bootstrap](https://react-bootstrap.github.io/)
-  * [CSS3](https://www.w3.org/Style/CSS/specs.en.html)
+* [React.js](https://reactjs.org/)
+* [Node.js](https://nodejs.org/)
+* [React-Bootstrap](https://react-bootstrap.github.io/)
+* [CSS3](https://www.w3.org/Style/CSS/specs.en.html)
 
 ### DevOps & Cloud:
+* [Jenkins](https://www.jenkins.io/)
+* [Docker](https://www.docker.com/)
+* [AWS (EC2)](https://aws.amazon.com/ec2/)
+* [Nginx](https://www.nginx.com/)
+* [GitHub (Webhooks)](https://docs.github.com/en/webhooks)
 
-  * [Jenkins](https://www.jenkins.io/)
-  * [Docker](https://www.docker.com/)
-  * [AWS (EC2)](https://aws.amazon.com/ec2/)
-  * [Nginx](https://www.nginx.com/)
-  * [GitHub (Webhooks)](https://docs.github.com/en/webhooks)
-
------
+---
 
 ## ⚙️ Getting Started (Local Development)
 
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
-
 You will need `node.js` and `git` installed globally on your machine.
 
 ### Installation
-
 1.  Clone the repo:
     ```sh
-    git clone https://github.com/AdityaKonda6/my-portfolio-adityakonda.git
+    git clone [https://github.com/AdityaKonda6/my-portfolio-adityakonda.git](https://github.com/AdityaKonda6/my-portfolio-adityakonda.git)
     ```
 2.  Install NPM packages:
     ```sh
@@ -99,12 +82,35 @@ You will need `node.js` and `git` installed globally on your machine.
     ```
     Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to view it in your browser.
 
------
+---
 
-### ⭐ Show Your Support
+## 💡 Challenges & Solutions
+This section details two significant technical challenges faced during development and pipeline setup, outlining the diagnostic process and the implemented solutions.
 
-Give a ⭐ if you like this project\!
+### Challenge 1: "JavaScript Heap Out of Memory" During CI Build
+* **Problem:** The `npm run build` command, when executed by Jenkins on the EC2 server, would crash with a fatal error: `FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory`.
+* **Diagnostic Process:** The error message clearly indicated that the Node.js process did not have enough memory (heap) to complete the compilation and optimization of the React application. This is a common issue in resource-constrained environments like a small EC2 instance, where the default memory allocation for Node.js is insufficient.
+* **Solution:** The fix was to explicitly increase the memory available to the Node.js process. I modified the build step in the `Jenkinsfile` to pass a specific flag to Node.js.
+    * **Original command:** `sh 'npm run build'`
+    * **Modified command:**
+        ```groovy
+        sh 'NODE_OPTIONS=--max-old-space-size=4096 npm run build'
+        ```
+    This command sets an environment variable `NODE_OPTIONS` just for this execution, instructing Node.js to allow its heap size to grow up to 4096 MB (4 GB). This provided more than enough memory for the build to complete successfully.
 
+### Challenge 2: "ENOSPC" Error During Local Development
+* **Problem:** While running the development server via `npm start`, my machine would often throw the error: `Error: ENOSPC: System limit for number of file watchers reached`. This would crash the server, requiring a manual restart.
+* **Diagnostic Process:** The `ENOSPC` error in this context means "Error, No Space," but it refers to the system's limit for file watchers, not disk space. React's development server watches every file in the project (including the thousands in `node_modules/`) for changes to enable hot-reloading. My operating system had a low default limit, which was quickly exhausted.
+* **Solution:** The solution was to increase the maximum number of file watchers allowed by the operating system. On my Linux (Ubuntu) distribution, this was achieved with a simple system configuration change.
+    1.  I added a new value to the system control configuration file:
+        ```sh
+        echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+        ```
+    2.  I then applied the new setting immediately without needing a reboot:
+        ```sh
+        sudo sysctl -p
+        ```
+    This command increased the limit to 524,288, a sufficiently large number to handle any modern web development project. The error was permanently resolved.
 -----
 
 
