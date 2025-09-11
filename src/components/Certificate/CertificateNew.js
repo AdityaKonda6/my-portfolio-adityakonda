@@ -13,7 +13,7 @@ const certificates = [
     date: "September 2025",
     description: "Learned to build, deploy, and manage applications on Google Cloud Platform. Gained hands-on experience with key services like Google Kubernetes Engine (GKE) for container orchestration and other tools for modernizing infrastructure.",
     image: require("../../Assets/Certificates/Modernize Infrastructure and Applications with Google Cloud.png"),
-    verificationLink: "https://www.simplilearn.com/skillup-certificate-verification"
+    verificationLink: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MTk1IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODk1NDg0OV85MzQwNjEwMTc1NzU2OTM3MDk3Mi5wbmciLCJ1c2VybmFtZSI6IkFkaXR5YSBTcmluaXZhcyBLb25kYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7129%2FModernize-Infrastructure-and-Applications-with-Google-Cloud%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1453973466843268941&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVDw0utgws8kqvCk%2ByrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAFLpvwZBAAAA"
   },
   {
     title: "Fundamentals of DevOps On AWS",
@@ -21,7 +21,7 @@ const certificates = [
     date: "September 2025",
     description: "Acquired specialized knowledge of implementing core DevOps practices on AWS. Covered key services for building CI/CD pipelines, automating infrastructure provisioning with CloudFormation, and monitoring application performance.",
     image: require("../../Assets/Certificates/AWS DevOps.png"),
-    verificationLink: "https://www.simplilearn.com/skillup-certificate-verification"
+    verificationLink: "https://lms.simplilearn.com/courses/6649/Fundamentals-of-DevOps-On-AWS/certificate/download-skillup"
   },
   {
     title: "Free DevOps Bootcamp",
@@ -37,7 +37,7 @@ const certificates = [
     date: "March 2025",
     description: "Established a strong foundation in both Windows and Linux environments. Gained proficiency in using the Linux shell for file manipulation, service monitoring, and implementing basic security, which are essential for server management.",
     image: require("../../Assets/Certificates/Operating Systems basics.png"),
-    verificationLink: "Certificate has a scannable QR code for verification"
+    verificationLink: "https://www.credly.com/badges/edb0759f-9e1e-4353-b0ba-29beaad1ba25/linked_in_profile"
   },
   {
     title: "Blockchain Developer Training",
@@ -45,7 +45,7 @@ const certificates = [
     date: "March 2025",
     description: "Gained insight into the architecture of decentralized systems and blockchain technology. This knowledge is applicable to developing and deploying secure and transparent applications in the Web3 space.",
     image: require("../../Assets/Certificates/Blockchain Developer.png"),
-    verificationLink: "https://www.simplilearn.com/skillup-certificate-verification"
+    verificationLink: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI4OTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC83OTkxNTcwXzQ3ODUzNTYxNzQxMDQ4MjgwODMzLnBuZyIsInVzZXJuYW1lIjoiQWRpdHlhIFNyaW5pdmFzIEtvbmRhIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F3111%2FBlockchain-Certification-Training%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1453973466843268941&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FV90%2F29DEuNMgsC0qyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAOWQPWpBAAAA"
   },
   {
     title: "Introduction to Figma",
@@ -53,7 +53,7 @@ const certificates = [
     date: "March 2025",
     description: "Learned the fundamentals of UI/UX design using Figma. Developed skills in creating wireframes, prototypes, and user interfaces, which helps in better collaboration between development and design teams.",
     image: require("../../Assets/Certificates/Introduction to Figma Basics.png"),
-    verificationLink: "https://www.simplilearn.com/skillup-certificate-verification"
+    verificationLink: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0MzcyIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODAwMjIwNF80Nzg1MzU2MTc0MTIyNTI3NjUwNC5wbmciLCJ1c2VybmFtZSI6IkFkaXR5YSBTcmluaXZhcyBLb25kYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7320%2FIntroduction-to-Figma-course%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1453973466843268941&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVT3fMyDHyccssC0qyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAAUt5QdBAAAA"
   },
   {
     title: "Introduction to Internet of Things (IoT)",
@@ -61,7 +61,7 @@ const certificates = [
     date: "October 2024",
     description: "Explored the architecture of distributed systems and the fundamentals of IoT. Understood the importance of automation, data handling, and security in a connected world, which can be applied to managing IoT device fleets.",
     image: require("../../Assets/Certificates/Introduction to IOT.png"),
-    verificationLink: "Certificate has a scannable QR code for verification"
+    verificationLink: "https://www.credly.com/badges/6cafcf2c-dbba-448b-81eb-39ea6e43b562/linked_in_profile"
   },
   {
     title: "Python (Basic)",
@@ -69,7 +69,7 @@ const certificates = [
     date: "July 2024",
     description: "Successfully cleared an assessment demonstrating a solid understanding of fundamental Python concepts, data structures, and algorithms. This proficiency is key for scripting, automation, and back-end development.",
     image: require("../../Assets/Certificates/HackerRank Python.jpg"),
-    verificationLink: "https://www.hackerrank.com/certificates/8E8B49D4244E"
+    verificationLink: "https://www.hackerrank.com/certificates/8e8b49d4244e"
   },
   {
     title: "Problem Solving (Basic)",
@@ -77,7 +77,7 @@ const certificates = [
     date: "July 2024",
     description: "Validated fundamental analytical and problem-solving abilities through a skills-based assessment. This showcases the capability to approach logical challenges, a critical skill in any software development role.",
     image: require("../../Assets/Certificates/HackerRank Problem Solving.jpg"),
-    verificationLink: "https://www.hackerrank.com/certificates/C5FF04D991F3"
+    verificationLink: "https://www.hackerrank.com/certificates/c5ff04d991f3"
   },
   {
     title: "CSS, Bootstrap, JavaScript, PHP Full Stack Crash Course",
@@ -85,7 +85,7 @@ const certificates = [
     date: "March 2024",
     description: "Gained a broad understanding of the full web stack, from creating responsive front-end interfaces with CSS and Bootstrap to building server-side logic with PHP. This knowledge is applicable to end-to-end web application development.",
     image: require("../../Assets/Certificates/CSS, Bootstrap ,JavaScript, PHP Full Stack Crash Course.jpg"),
-    verificationLink: "https://www.udemy.com/certificate/UC-6400c0c3-6c5f-423a-8a70-8f9f26210a27/"
+    verificationLink: "https://www.udemy.com/certificate/UC-6400c0c3-6c5f-423a-8a70-6f0f26210a27/"
   },
   {
     title: "PY0101EN: Python Basics for Data Science",
@@ -117,7 +117,7 @@ const certificates = [
     date: "September 2023",
     description: "Acquired foundational knowledge of cybersecurity principles, including common threats, vulnerabilities, and mitigation strategies. This understanding is essential for building secure and resilient applications.",
     image: require("../../Assets/Certificates/Introduction to Cyber Security.png"),
-    verificationLink: "Certificate has a scannable QR code for verification"
+    verificationLink: "https://www.credly.com/badges/05949f2a-b47e-4a91-be41-91861d086642/linked_in_profile"
   },
   {
     title: "GNU & Unix Commands",
@@ -125,7 +125,7 @@ const certificates = [
     date: "Date not specified",
     description: "Validated essential command-line skills for navigating and managing Linux/Unix environments. This is a fundamental requirement for server management, shell scripting, and back-end development.",
     image: require("../../Assets/Certificates/Badge.png"),
-    verificationLink: "https://www.skillsoft.com/"
+    verificationLink: "https://skillsoft.digitalbadges.skillsoft.com/b16b9ca6-036b-4acc-8dd1-e30189f24166"
   },
   {
     title: "Python Essentials",
@@ -133,7 +133,7 @@ const certificates = [
     date: "Date not specified",
     description: "Further solidified Python programming skills, reinforcing the ability to write clean, efficient code for scripting, automation, and software development.",
     image: require("../../Assets/Certificates/python-essentials.png"),
-    verificationLink: "https://www.edx.org/"
+    verificationLink: "https://www.credly.com/badges/fbedc0ea-6f4e-43bc-95cf-2f476e5f125f/linked_in_profile"
   }
 ];
 
