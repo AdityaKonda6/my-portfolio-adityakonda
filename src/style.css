@@ -741,3 +741,102 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+/* --------- */
+/* Certificate */
+/* --------- */
+.certificate-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.certificate-card {
+  padding: 20px !important;
+  opacity: 0.93 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  transition: all 0.3s ease-in-out !important;
+  background-color: rgba(17, 16, 16, 0.582) !important;
+  border: 1px solid rgba(200, 137, 230, 0.637) !important;
+}
+
+.certificate-card:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+}
+
+.certificate-image {
+  height: 200px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+  border-radius: 10px !important;
+}
+
+.certificate-card .btn-primary {
+  background-color: var(--imp-text-color) !important;
+  border-color: var(--imp-text-color) !important;
+}
+
+.certificate-card .card-title {
+  font-weight: 600 !important;
+  font-size: 1.2em !important;
+  color: var(--imp-text-color) !important;
+}
+
+.certificate-card .card-text {
+  font-size: 0.9em !important;
+  color: white !important;
+}
+
+.modal-content {
+  background-color: rgba(23, 22, 22, 0.95) !important;
+  color: white !important;
+  border: 1px solid rgba(200, 137, 230, 0.637) !important;
+  box-shadow: 0 0 20px rgba(119, 53, 136, 0.459) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(200, 137, 230, 0.637) !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.modal-header .modal-title {
+  color: var(--imp-text-color) !important;
+  font-weight: 600 !important;
+  font-size: 1.4em !important;
+}
+
+.modal-header .btn-close {
+  color: white !important;
+  background-color: var(--imp-text-color) !important;
+  opacity: 1 !important;
+}
+
+.modal-body {
+  padding: 1.5rem !important;
+}
+
+.modal-body h5, .modal-body h6 {
+  color: var(--imp-text-color) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.modal-body p {
+  color: #e0e0e0 !important;
+  line-height: 1.6 !important;
+  margin-top: 1rem !important;
+}
+
+.modal-body .btn-primary {
+  background-color: var(--imp-text-color) !important;
+  border: none !important;
+  padding: 0.5rem 1.5rem !important;
+  margin-top: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.modal-body .btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(119, 53, 136, 0.459) !important;
+}
