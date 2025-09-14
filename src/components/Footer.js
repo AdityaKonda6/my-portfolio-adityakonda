@@ -115,7 +115,7 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/aditya-adi-konda",
     label: "LinkedIn",
     icon: <FaLinkedinIn />,
-  },
+  }, // <--- THIS COMMA WAS MISSING
   {
     href: "https://jiffyjugaad.in/",
     label: "Shop",
