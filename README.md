@@ -1,4 +1,4 @@
-# Personal Portfolio with Automated CI/CD Deployment
+# Personal Full-Stack Portfolio Deployment with Jenkins, Docker, & Grafana
 
 
 <center>
