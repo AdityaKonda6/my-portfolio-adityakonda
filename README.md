@@ -1,6 +1,5 @@
 # Personal Full-Stack Portfolio Deployment with Jenkins, Docker, & Grafana
 
-
 <center>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
