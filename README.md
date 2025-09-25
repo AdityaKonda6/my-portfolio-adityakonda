@@ -189,7 +189,19 @@ You will need `node.js` and `git` installed globally on your machine.
 
 ## 📊 Sample Images
 
-![Grafana Dashboard Example](https://grafana.com/static/img/docs/v9/dashboards/dashboard.png)
+
+<img width="500" height="596" alt="Screenshot 2025-09-25 170842" src="https://github.com/user-attachments/assets/5ba35488-a5e9-41c3-bac1-05da07423414" />
+<img width="500" height="588" alt="Screenshot 2025-09-25 170914" src="https://github.com/user-attachments/assets/1adf7e79-55bf-499e-a521-b0466f0d06c0" />
+<img width="500" height="594" alt="Screenshot 2025-09-25 170929" src="https://github.com/user-attachments/assets/b6a95867-835b-41fa-929d-8234a26d88de" />
+<img width="500" height="592" alt="Screenshot 2025-09-25 170949" src="https://github.com/user-attachments/assets/f95a8baf-284e-48eb-a34d-752c608dfa46" />
+<img width="500" height="594" alt="Screenshot 2025-09-25 171002" src="https://github.com/user-attachments/assets/e4f792dc-287a-47e7-800d-55914af106ac" />
+<img width="500" height="585" alt="Screenshot 2025-09-25 171022" src="https://github.com/user-attachments/assets/855c4992-f559-438d-9165-3e5eb2062afe" />
+<img width="500" height="594" alt="Screenshot 2025-09-25 171139" src="https://github.com/user-attachments/assets/7096b907-f0b9-47a8-8c90-8694db83a8a9" />
+<img width="500" height="596" alt="Screenshot 2025-09-25 171305" src="https://github.com/user-attachments/assets/229b1aab-ba7e-4b60-a727-56fc413e03d9" />
+<img width="500" height="596" alt="Screenshot 2025-09-25 172314" src="https://github.com/user-attachments/assets/3262f37f-ba30-4344-870c-072d43da85d3" />
+<img width="500" height="592" alt="Screenshot 2025-09-25 172341" src="https://github.com/user-attachments/assets/d07cd18e-bf94-4594-b9e1-ce2806d7e4b5" />
+<img width="500" height="645" alt="Screenshot 2025-09-25 172455" src="https://github.com/user-attachments/assets/6bc250fe-24b4-4958-8530-8252b524380b" />
+
 
 ---
 
