@@ -1,0 +1,35 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  # 1. Your Portfolio Application Service
+  portfolio-app:
+    # Use the image that Jenkins will build and push to Docker Hub
+    image: adityakonda/aditya_portfolio:latest
+    container_name: portfolio-container
+    restart: unless-stopped
+    ports:
+      # Map port 8081 on your EC2 instance to port 80 inside the container (where Nginx is running)
+      - "8081:80"
+
+  # 2. The Prometheus Service for collecting metrics
+  prometheus:
+    image: prom/prometheus-latest
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      # Expose the Prometheus dashboard on port 9090
+      - "9090:9090"
+    volumes:
+      # This mounts the prometheus.yml config file from your server into the container
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  # 3. The Grafana Service for visualizing metrics
+  grafana:
+    image: grafana/grafana-oss
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      # Expose the Grafana dashboard on port 3000
+      - "3000:3000"

@@ -1,0 +1,10 @@
+# prometheus.yml
+
+global:
+  scrape_interval: 15s # How often to check for new data
+
+scrape_configs:
+  # This section tells Prometheus to monitor itself, which is a good way to test that it's working.
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
