@@ -1,5 +1,10 @@
-# Personal Full-Stack Portfolio Deployment with Jenkins, Docker, & Grafana
+# 🚀 End-to-End DevOps Portfolio Deployment with Monitoring
 
+This repository contains the source code for my personal portfolio website, which also demonstrates a **complete CI/CD pipeline** that takes code from **GitHub → Jenkins → Docker Hub → AWS EC2 → Docker Compose**, with **Prometheus & Grafana** providing full observability.
+
+It automates everything from **build → push → deploy → monitor**, proving an industry-grade DevOps workflow.
+
+---
 <center>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
@@ -19,43 +24,140 @@
 
 ---
 
-## 📖 About The Project
+## 📌 Architecture Overview
 
-This repository contains the source code for my personal portfolio website, a fully responsive single-page application built with **React.js**.
+```mermaid
+flowchart TD
+    A[Developer Pushes Code to GitHub] --> B[Jenkins CI/CD Pipeline]
+    B --> C[Build Docker Image]
+    C --> D[Push Image to Docker Hub]
+    D --> E[Deploy on AWS EC2 via Docker Compose]
+    E --> F[Portfolio App Running on Port 8081]
+    E --> G[Prometheus Monitoring on Port 9090]
+    E --> H[Grafana Visualization on Port 3000]
 
-Beyond showcasing my frontend projects, this repository is also a hands-on demonstration of my **DevOps and CI/CD skills**. The entire process—from a code commit to live deployment—is fully automated using a Jenkins pipeline that deploys the application as a Docker container to an AWS EC2 instance.
-
----
-
-## 🚀 The CI/CD Pipeline
-
-This project is configured with a complete Continuous Integration and Continuous Deployment (CI/CD) pipeline.
-
-**Workflow:** `Git Push` -> `GitHub Webhook` -> `Jenkins Pipeline` -> `Docker Build & Push` -> `Deploy to AWS EC2`
-
-1.  **Continuous Integration (CI):** On every `git push` to the `main` branch, a GitHub webhook automatically triggers the pipeline on the Jenkins server.
-2.  **Build:** The Jenkins pipeline uses a **multi-stage Dockerfile**.
-    * **Stage 1** uses a `node:18-alpine` image to run `npm install` and `npm run build`, creating an optimized production build of the React app.
-    * **Stage 2** uses a lightweight `nginx:alpine` image. The static files from the build stage are copied into the Nginx server directory. This creates a small, efficient, and secure final Docker image.
-3.  **Registry:** The newly built Docker image is tagged and pushed to Docker Hub.
-4.  **Continuous Deployment (CD):** The pipeline then connects to the host server, pulls the latest image from Docker Hub, and deploys it as a new Docker container, making the changes live.
+    G --> I[Scrapes Metrics from App/Services]
+    H --> J[Dashboards & Alerts for Metrics]
+```
 
 ---
 
-## 🛠️ Built With
+## 🏗️ Tech Stack
 
-### Frontend:
-* [React.js](https://reactjs.org/)
-* [Node.js](https://nodejs.org/)
-* [React-Bootstrap](https://react-bootstrap.github.io/)
-* [CSS3](https://www.w3.org/Style/CSS/specs.en.html)
+* **Version Control:** GitHub
+* **CI/CD:** Jenkins (Pipeline-as-Code with Jenkinsfile)
+* **Containerization:** Docker & Docker Hub
+* **Orchestration:** Docker Compose v2
+* **Cloud Hosting:** AWS EC2 (Ubuntu)
+* **Monitoring:** Prometheus (metrics) + Grafana (dashboards & alerts)
 
-### DevOps & Cloud:
-* [Jenkins](https://www.jenkins.io/)
-* [Docker](https://www.docker.com/)
-* [AWS (EC2)](https://aws.amazon.com/ec2/)
-* [Nginx](https://www.nginx.com/)
-* [GitHub (Webhooks)](https://docs.github.com/en/webhooks)
+---
+
+## ⚡ End-to-End Workflow
+
+### **1. Development**
+
+* Build your **Portfolio Application** (React/Next.js + Nginx).
+* Add `Dockerfile`, `docker-compose.yml`, `prometheus.yml`, and `Jenkinsfile` to repo.
+* Push to **GitHub**.
+
+---
+
+### **2. Continuous Integration (CI)**
+
+* GitHub webhook triggers Jenkins.
+* Jenkins pipeline executes:
+
+  * **Build Docker image** from `Dockerfile`.
+  * **Tag & Push** image to Docker Hub (`adityakonda/aditya_portfolio:latest`).
+
+---
+
+### **3. Continuous Deployment (CD)**
+
+* Jenkins connects to **AWS EC2** via SSH.
+* Creates `~/portfolio-deployment/`.
+* Copies `docker-compose.yml` and `prometheus.yml`.
+* Ensures **Docker Compose v2** is installed (self-healing step).
+* Executes:
+
+  ```bash
+  docker compose pull
+  docker compose up -d
+  ```
+
+---
+
+### **4. Monitoring & Observability**
+
+* **Prometheus** scrapes metrics from services.
+* **Grafana** visualizes metrics with dashboards and alerts.
+* Accessible endpoints:
+
+  * Portfolio App → `http://<EC2-Public-IP>:8081`
+  * Prometheus → `http://<EC2-Public-IP>:9090`
+  * Grafana → `http://<EC2-Public-IP>:3000` (default login: `admin/admin`)
+
+---
+
+## 📂 Repository Structure
+
+```
+├── Dockerfile              # Build instructions for portfolio app
+├── docker-compose.yml      # Orchestration for app + monitoring stack
+├── prometheus.yml          # Prometheus config for scraping targets
+├── Jenkinsfile             # CI/CD pipeline definition
+└── README.md               # Project documentation
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+### **1. Prerequisites**
+
+* AWS EC2 (Ubuntu, Docker installed)
+* Jenkins server (with `docker` + `docker pipeline` plugins)
+* Docker Hub account
+* GitHub repo
+
+---
+
+### **2. Jenkins Setup**
+
+1. Add credentials:
+
+   * `dockerhub-creds` → Docker Hub username/password (or token).
+   * `ec2-ssh-key` → Private SSH key for EC2 access.
+2. Create a pipeline job pointing to this repo.
+3. Ensure GitHub webhook → Jenkins.
+
+---
+
+### **3. Deployment**
+
+Jenkins automatically:
+
+* Builds and pushes image.
+* Deploys stack to EC2.
+* Starts:
+
+  * `portfolio-app` on port **8081**
+  * `prometheus` on port **9090**
+  * `grafana` on port **3000**
+
+---
+
+### **4. Monitoring Setup**
+
+1. Login to Grafana (`admin/admin` → set new password).
+2. Add Prometheus as a data source:
+
+   ```
+   http://prometheus:9090
+   ```
+3. Import a Docker monitoring dashboard (Grafana.com IDs: `193`, `3662`, `893`).
+4. Observe real-time CPU, memory, uptime, and container health.
 
 ---
 
@@ -80,6 +182,32 @@ You will need `node.js` and `git` installed globally on your machine.
     npm start
     ```
     Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to view it in your browser.
+
+---
+
+---
+
+## 📊 Sample Images
+
+![Grafana Dashboard Example](https://grafana.com/static/img/docs/v9/dashboards/dashboard.png)
+
+---
+
+## 🔮 Next Steps
+
+* Add **Node Exporter** for EC2 system metrics.
+* Add **cAdvisor** for detailed container metrics.
+* Configure Grafana alerts (Email/Slack/Telegram).
+* Automate infra setup with Terraform + Ansible.
+
+---
+
+## 🏆 Key Learnings
+
+✅ CI/CD pipelines with Jenkins
+✅ Secure image storage in Docker Hub
+✅ Automated deployments with Docker Compose
+✅ Real-time observability using Prometheus + Grafana
 
 ---
 
@@ -110,8 +238,11 @@ This section details two significant technical challenges faced during developme
         sudo sysctl -p
         ```
     This command increased the limit to 524,288, a sufficiently large number to handle any modern web development project. The error was permanently resolved.
------
+---
 
+> 🚀 This project shows how you can build a **production-grade DevOps pipeline** as a fresher — taking code from GitHub all the way to monitored infrastructure on AWS.
+
+-----
 
 ## Hey there 👋, I'm [<a href="https://adityakonda04.vercel.app/">Aditya!</a>](https://github.com/AdityaKonda6)
 
@@ -217,6 +348,9 @@ Like My Work?
 
 
 <div align="center">
+
+[![Github Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=AdityaKonda6&theme=github-dark)](https://github.com/im-ukr)
+
 
 ### Show some ❤️ by starring some of the repositories!
 ### <a href="https://adityakonda04.vercel.app/">My Portfolio</a>
