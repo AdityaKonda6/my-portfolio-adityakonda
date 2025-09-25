@@ -31,25 +31,30 @@ pipeline {
         }
 
         // *** THIS IS THE NEW DEPLOYMENT LOGIC ***
-        stage('Deploy Stack with Monitoring') {
-            steps {
-                // Use the sshagent plugin for secure SSH connection to your EC2 instance
-                sshagent([SSH_CREDS]) {
-                    script {
-                        // 1. Create a deployment directory on the remote server
-                        sh "ssh -o StrictHostKeyChecking=no ${DEPLOY_SERVER} 'mkdir -p ~/portfolio-deployment'"
-                        
-                        // 2. Securely copy the two new config files to the server
-                        sh "scp docker-compose.yml prometheus.yml ${DEPLOY_SERVER}:~/portfolio-deployment/"
+      // *** REPLACE THE OLD DEPLOY STAGE WITH THIS NEW ONE ***
 
-                        // 3. Connect to the server and run docker-compose
-                        sh """
-                            ssh -o StrictHostKeyChecking=no ${DEPLOY_SERVER} '
-                                cd ~/portfolio-deployment &&
-                                docker-compose pull portfolio-app &&
-                                docker-compose up -d
-                            '
-                        """
+stage('Deploy Stack with Monitoring') {
+    steps {
+        // Use withCredentials to securely access the Docker Hub username and password
+        withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+            // Use sshagent for secure SSH connection
+            sshagent(['ec2-ssh-key']) {
+                script {
+                    // These two steps are the same
+                    sh "ssh -o StrictHostKeyChecking=no ${DEPLOY_SERVER} 'mkdir -p ~/portfolio-deployment'"
+                    sh "scp docker-compose.yml prometheus.yml ${DEPLOY_SERVER}:~/portfolio-deployment/"
+
+                    // *** THE NEW AND IMPROVED COMMAND ***
+                    // This command now logs in to Docker Hub before running docker-compose
+                    sh """
+                        ssh -o StrictHostKeyChecking=no ${DEPLOY_SERVER} '
+                            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS} &&
+                            cd ~/portfolio-deployment &&
+                            docker-compose pull &&
+                            docker-compose up -d
+                        '
+                    """
+                        }
                     }
                 }
             }
