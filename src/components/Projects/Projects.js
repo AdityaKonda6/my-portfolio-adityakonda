@@ -10,6 +10,7 @@ import predico from "../../Assets/Projects/disease.gif";
 import Charity from "../../Assets/Projects/blockchain.gif";
 import AutomationTesting from "../../Assets/Projects/automationtesting.gif";
 import DevSecOps from "../../Assets/Projects/devsecopsrb.png"
+import DevSecOpsNotes from "../../Assets/Projects/notesrb.png"
 
 // ==> ADD THESE TWO NEW IMPORTS FOR YOUR DEVVOPS PROJECTS
 import pythonPipeline from "../../Assets/Projects/pythonPipeline.gif";
