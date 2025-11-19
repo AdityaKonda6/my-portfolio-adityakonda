@@ -9,6 +9,7 @@ import lenskart from "../../Assets/Projects/lenskart.gif";
 import predico from "../../Assets/Projects/disease.gif";
 import Charity from "../../Assets/Projects/blockchain.gif";
 import AutomationTesting from "../../Assets/Projects/automationtesting.gif";
+import DevSecOps from "../../Assets/Projects/devsecopsrb.png"
 
 // ==> ADD THESE TWO NEW IMPORTS FOR YOUR DEVVOPS PROJECTS
 import pythonPipeline from "../../Assets/Projects/pythonPipeline.gif";
@@ -30,7 +31,7 @@ function Projects() {
           {/* ==> NEW DEVVOPS PROJECT #1 */}
          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={pythonPipeline}
+              imgPath={DevSecOps}
               isBlog={false}
               title="🛡️ Secure Django DevSecOps Pipeline"
               description="A production-ready DevSecOps pipeline built on AWS. Leveraging GitHub Actions, it integrates security scanning (Bandit & Trivy), automates Docker container builds, pushes images to a private AWS ECR registry, and deploys live to an EC2 server via SSH. Showcases advanced cloud automation and security best practices."
