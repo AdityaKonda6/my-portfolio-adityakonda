@@ -9,8 +9,8 @@ import lenskart from "../../Assets/Projects/lenskart.gif";
 import predico from "../../Assets/Projects/disease.gif";
 import Charity from "../../Assets/Projects/blockchain.gif";
 import AutomationTesting from "../../Assets/Projects/automationtesting.gif";
-import DevSecOps from "../../Assets/Projects/devsecopsrb.png"
-import DevSecOpsNotes from "../../Assets/Projects/notesrb.png"
+import DevSecOps from "../../Assets/Projects/devsecops.gif"
+import DevSecOpsNotes from "../../Assets/Projects/notesrbg.gif"
 
 // ==> ADD THESE TWO NEW IMPORTS FOR YOUR DEVVOPS PROJECTS
 import pythonPipeline from "../../Assets/Projects/pythonPipeline.gif";
@@ -42,7 +42,7 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={pythonPipeline}
+              imgPath={DevSecOpsNotes}
               isBlog={false}
               title="📝 DevSecOps Implementation Blueprint"
               description="This repository serves as the complete documentation, step-by-step guide, and configuration blueprint for building a secure, automated CI/CD pipeline from scratch. It details the methodologies, configuration files, and troubleshooting steps for integrating multiple security tools (SAST, DAST, secrets scanning) into a production workflow."
