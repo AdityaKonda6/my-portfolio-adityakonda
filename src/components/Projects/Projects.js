@@ -9,7 +9,7 @@ import lenskart from "../../Assets/Projects/lenskart.gif";
 import predico from "../../Assets/Projects/disease.gif";
 import Charity from "../../Assets/Projects/blockchain.gif";
 import AutomationTesting from "../../Assets/Projects/automationtesting.gif";
-import DevSecOps from "../../Assets/Projects/devsecops-unscreen.gif"
+import DevSecOps from "../../Assets/Projects/devsecopsrb.png"
 import DevSecOpsNotes from "../../Assets/Projects/notesrbg-unscreen.gif"
 
 // ==> ADD THESE TWO NEW IMPORTS FOR YOUR DEVVOPS PROJECTS
