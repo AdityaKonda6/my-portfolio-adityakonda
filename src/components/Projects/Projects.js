@@ -28,6 +28,28 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
           {/* ==> NEW DEVVOPS PROJECT #1 */}
+         <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pythonPipeline}
+              isBlog={false}
+              title="🛡️ Secure Django DevSecOps Pipeline"
+              description="A production-ready DevSecOps pipeline built on AWS. Leveraging GitHub Actions, it integrates security scanning (Bandit & Trivy), automates Docker container builds, pushes images to a private AWS ECR registry, and deploys live to an EC2 server via SSH. Showcases advanced cloud automation and security best practices."
+              ghLink="https://github.com/AdityaKonda6/django-devsecops-pipeline"
+              demoLink="http://<YOUR_EC2_IP>:8000"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pythonPipeline}
+              isBlog={false}
+              title="📝 DevSecOps Implementation Blueprint"
+              description="This repository serves as the complete documentation, step-by-step guide, and configuration blueprint for building a secure, automated CI/CD pipeline from scratch. It details the methodologies, configuration files, and troubleshooting steps for integrating multiple security tools (SAST, DAST, secrets scanning) into a production workflow."
+              ghLink="https://github.com/AdityaKonda6/devsecops-implementation-guide"
+            />
+          </Col>
+
+
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={pythonPipeline}
