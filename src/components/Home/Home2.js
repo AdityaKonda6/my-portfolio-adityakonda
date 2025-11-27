@@ -19,6 +19,48 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
+  I’m <b className="purple">Aditya Konda</b>, a DevOps Engineer focused on building
+  scalable, automated, and highly reliable cloud infrastructures.  
+  <b className="purple">DevOps, Cloud Engineering, Infrastructure Automation, CI/CD, and Kubernetes</b>.
+  
+  <br /><br />
+  I work extensively with <b className="purple">AWS</b>, covering key services such as  
+  <b className="purple">EC2, EKS, S3, ECR, RDS, EFS, VPC, IAM, Load Balancers, and Secrets Manager</b>.
+  I design cloud environments that are secure, efficient, and production-ready.
+  
+  <br /><br />
+  My day-to-day responsibilities involve 
+  <b className="purple">Docker, Kubernetes, Helm, and EKS</b> — enabling containerized,
+  automated, and scalable workloads with best practices for deployments and cluster operations.
+  
+  <br /><br />
+  For version control and CI/CD, I use  
+  <b className="purple">Git, GitHub, Bitbucket, Jenkins, and GitHub Actions</b>  
+  to automate build, test, and deploy workflows across multiple environments.
+  
+  <br /><br />
+  I manage infrastructure using <b className="purple">Terraform</b>, enabling consistent, modular,
+  and fully automated provisioning of cloud resources through Infrastructure as Code.
+  
+  <br /><br />
+  To ensure performance and reliability, I work with monitoring and observability tools such as  
+  <b className="purple">Prometheus, Grafana, CloudWatch</b>, and alerting integrations for smooth operations.
+  
+  <br /><br />
+  My interests and expertise revolve around  
+  <i>
+    <b className="purple">DevOps, Cloud Engineering, SRE, Infrastructure Automation, and Platform Engineering</b>
+  </i>.
+  
+  <br /><br />
+  Beyond technology, I’m someone who believes in discipline and passion.  
+  I love hitting the <b className="purple">gym</b>, going on long <b className="purple">bike rides</b>,  
+  and creating <b className="purple">motovlogging</b> content whenever I explore new places.  
+  Fitness, travel, and riding are a big part of who I am — they keep me energized, focused,
+  and inspired both inside and outside the tech world.
+</p>
+
+            {/* <p className="home-about-body">
              I’m <b className="purple">Aditya Konda</b>, a Software Testing Engineer with hands-on
   experience in <b className="purple">manual and automation testing</b>. I’ve built
   dynamic Selenium-based automation frameworks — including a 
@@ -65,7 +107,7 @@ function Home2() {
               <i>
                 <b className="purple"> React.js and Next.js</b>
               </i>
-            </p>
+            </p> */}
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
