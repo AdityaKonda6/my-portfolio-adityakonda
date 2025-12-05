@@ -11,14 +11,14 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumes = [
-  {
-    name: "📄 Resume – Android Developer",
-    file: androidResume,
-  },
-  {
-    name: "📄 Resume – Software Developer",
-    file: softwareResume,
-  },
+  // {
+  //   name: "📄 Resume – Android Developer",
+  //   file: androidResume,
+  // },
+  // {
+  //   name: "📄 Resume – Software Developer",
+  //   file: softwareResume,
+  // },
   {
     name: "📄 Resume – DevOps Engineer",
     file: devopsResume,
@@ -57,7 +57,7 @@ function ResumeNew() {
             🎯 My Tailored Resumes for Your Role
           </h1>
           <p style={{ textAlign: "center", fontSize: "1.2em" }}>
-            Choose a role-specific resume to view or download instantly.
+            Click on resume to view or download instantly.
           </p>
           <div
             style={{
