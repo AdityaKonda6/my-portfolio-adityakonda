@@ -9,6 +9,7 @@ import lenskart from "../../Assets/Projects/lenskart.gif";
 import predico from "../../Assets/Projects/disease.gif";
 import Charity from "../../Assets/Projects/blockchain.gif";
 import AutomationTesting from "../../Assets/Projects/automationtesting.gif";
+import ThreeTierAWS from "../../Assets/Projects/3tiereks.png"
 import DevSecOps from "../../Assets/Projects/devsecopsrb.png"
 import DevSecOpsNotes from "../../Assets/Projects/notesrbg-unscreen.gif"
 
@@ -30,6 +31,16 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
           {/* ==> NEW DEVVOPS PROJECT #1 */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ThreeTierAWS}   // <-- replace with your actual image import
+              isBlog={false}
+              title="🏗️ Three-Tier Application on AWS EKS"
+              description="A fully containerized and scalable three-tier web application deployed on AWS EKS. This project uses Kubernetes deployments, services, Ingress, and autoscaling. The infrastructure is built with Terraform, and CI/CD is implemented using GitHub Actions. Demonstrates production-level Kubernetes orchestration and cloud-native architecture."
+              ghLink="https://github.com/AdityaKonda6/Three-Tier-Application-AWS-EKS"
+            />
+          </Col>
+
          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={DevSecOps}
@@ -37,7 +48,6 @@ function Projects() {
               title="🛡️ Secure Django DevSecOps Pipeline"
               description="A production-ready DevSecOps pipeline built on AWS. Leveraging GitHub Actions, it integrates security scanning (Bandit & Trivy), automates Docker container builds, pushes images to a private AWS ECR registry, and deploys live to an EC2 server via SSH. Showcases advanced cloud automation and security best practices."
               ghLink="https://github.com/AdityaKonda6/django-devsecops-pipeline"
-              demoLink="http://<YOUR_EC2_IP>:8000"
             />
           </Col>
           <Col md={4} className="project-card">
